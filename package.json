@@ -1,0 +1,55 @@
+{
+  "name": "c4webservice",
+  "version": "0.0.1",
+  "description": "C4Framework Web Service",
+  "main": "out",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sextants/C4WebService.git"
+  },
+  "keywords": [
+    "C4Framework",
+    "Web",
+    "Service"
+  ],
+  "author": "Sextant",
+  "bugs": {
+    "url": "https://github.com/Sextants/C4WebService.git"
+  },
+  "dependencies": {
+    "@types/body-parser-xml": "^1.0.0",
+    "@types/compression": "0.0.36",
+    "@types/connect-redis": "0.0.7",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/cors": "^2.8.3",
+    "@types/express": "^4.11.1",
+    "@types/express-session": "^1.15.8",
+    "@types/glob": "^5.0.35",
+    "@types/ioredis": "^3.2.7",
+    "@types/jsonwebtoken": "^7.2.7",
+    "@types/multiparty": "0.0.31",
+    "@types/node": "^9.6.0",
+    "@types/xml2js": "^0.4.2",
+    "body-parser-xml": "^1.1.0",
+    "c4accesscontrol": "0.0.1",
+    "c4ajv": "0.0.1",
+    "c4jwt": "0.0.1",
+    "c4utils": "0.0.2",
+    "compression": "^1.7.2",
+    "connect-redis": "^3.3.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "glob": "^7.1.2",
+    "ioredis": "^3.2.2",
+    "jsonwebtoken": "^8.2.1",
+    "multiparty": "^4.1.3",
+    "path-to-regexp": "^2.2.1",
+    "reflect-metadata": "^0.1.12",
+    "xml2js": "^0.4.19"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"StaticRes.js","sourceRoot":"","sources":["../../src/Controllers/StaticRes.ts"],"names":[],"mappings":";;;;;;;;AAAA,qDAEwB;AAExB,MAAqB,SAAS;IAU1B,MAAM,CAAC,UAAU;QACb,EAAE;IACN,CAAC;CACJ;AAHG;IARC,qBAAG,CAAC;QACD,QAAQ,EAAM,eAAe;QAC7B,IAAI,EAAU,MAAM;QACpB,MAAM,EAAQ;YACV,IAAI,EAAG,CAAC,KAAK,CAAC;SACjB;QACD,SAAS,EAAG,IAAI;KACnB,CAAC;iCAGD;AAZL,4BAaC"}
