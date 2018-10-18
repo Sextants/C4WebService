@@ -185,7 +185,7 @@ function getRequestParams(paramConfig, req) {
         }
         else {
             // 参数没找到
-            if (c4utils_1.TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+            if (!c4utils_1.TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
                 Params[CurConfig.index] = CurConfig.defaultValue;
             }
             else {
@@ -231,7 +231,7 @@ function getRequestBody(paramConfig /*{ index : number; value : string}[]*/, req
         }
         else {
             // 参数没找到
-            if (c4utils_1.TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+            if (!c4utils_1.TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
                 Params[CurConfig.index] = CurConfig.defaultValue;
             }
             else {

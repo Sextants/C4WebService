@@ -184,7 +184,7 @@ function getRequestParams(paramConfig : ParamConfig[], req : any) {
             //}
         } else {
             // 参数没找到
-            if (TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+            if (!TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
               Params[CurConfig.index] = CurConfig.defaultValue;
             } else {
               if (CurConfig.required) {
@@ -230,7 +230,7 @@ function getRequestBody(paramConfig : ParamConfig[]/*{ index : number; value : s
             Params[CurConfig.index] = req.body[CurConfig.value];
         } else {
           // 参数没找到
-          if (TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+          if (!TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
             Params[CurConfig.index] = CurConfig.defaultValue;
           } else {
             if (CurConfig.required) {
