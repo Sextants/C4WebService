@@ -184,20 +184,29 @@ function getRequestParams(paramConfig : ParamConfig[], req : any) {
             //}
         } else {
             // 参数没找到
-            if (CurConfig.required) {
-                // 该参数为必传
-                if (!TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
-                    // 该参数有默认值，使用默认值
-                    // for (let j = 0; j < (CurConfig.index - Params.length); j++) {
-                    //     Params.push(undefined);
-                    // }
-                    // Params.push(CurConfig.defaultValue);
-                    Params[CurConfig.index] = req.query[CurConfig.defaultValue];
-                } else {
-                    // 没有默认值，抛出错误
-                    throw new Error("Need query param : " + CurConfig.value);
-                }
+            if (TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+              Params[CurConfig.index] = CurConfig.defaultValue;
+            } else {
+              if (CurConfig.required) {
+                // 没有默认值，抛出错误
+                throw new Error("Need query param : " + CurConfig.value);
+              }
+              Params[CurConfig.index] = undefined;
             }
+            // if (CurConfig.required) {
+            //     // 该参数为必传
+            //     if (!TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+            //         // 该参数有默认值，使用默认值
+            //         // for (let j = 0; j < (CurConfig.index - Params.length); j++) {
+            //         //     Params.push(undefined);
+            //         // }
+            //         // Params.push(CurConfig.defaultValue);
+            //         Params[CurConfig.index] = req.query[CurConfig.defaultValue];
+            //     } else {
+            //         // 没有默认值，抛出错误
+            //         throw new Error("Need query param : " + CurConfig.value);
+            //     }
+            // }
         }
     }
     return Params;
@@ -220,21 +229,31 @@ function getRequestBody(paramConfig : ParamConfig[]/*{ index : number; value : s
             // Params.push(req.body[CurConfig.value]);
             Params[CurConfig.index] = req.body[CurConfig.value];
         } else {
-            // 参数没找到
+          // 参数没找到
+          if (TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+            Params[CurConfig.index] = CurConfig.defaultValue;
+          } else {
             if (CurConfig.required) {
-                // 该参数为必传
-                if (!TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
-                    // 该参数有默认值，使用默认值
-                    // for (let j = 0; j < (CurConfig.index - Params.length); j++) {
-                    //     Params.push(undefined);
-                    // }
-                    // Params.push(CurConfig.defaultValue);
-                    Params[CurConfig.index] = req.body[CurConfig.defaultValue];
-                } else {
-                    // 没有默认值，抛出错误
-                    throw new Error("Need body property : " + CurConfig.value);
-                }
+              // 没有默认值，抛出错误
+              throw new Error("Need body param : " + CurConfig.value);
             }
+            Params[CurConfig.index] = undefined;
+          }
+            // // 参数没找到
+            // if (CurConfig.required) {
+            //     // 该参数为必传
+            //     if (!TypeUtils.isNullOrUndefined(CurConfig.defaultValue)) {
+            //         // 该参数有默认值，使用默认值
+            //         // for (let j = 0; j < (CurConfig.index - Params.length); j++) {
+            //         //     Params.push(undefined);
+            //         // }
+            //         // Params.push(CurConfig.defaultValue);
+            //         Params[CurConfig.index] = req.body[CurConfig.defaultValue];
+            //     } else {
+            //         // 没有默认值，抛出错误
+            //         throw new Error("Need body property : " + CurConfig.value);
+            //     }
+            // }
             // throw new Error("Need body property : " + CurConfig.value);
         }
     }
