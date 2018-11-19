@@ -1,6 +1,6 @@
 {
   "name": "c4webservice",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "C4Framework Web Service",
   "main": "out",
   "scripts": {
@@ -34,10 +34,10 @@
     "@types/node": "^9.6.0",
     "@types/xml2js": "^0.4.2",
     "body-parser-xml": "^1.1.0",
-    "c4accesscontrol": "0.0.1",
-    "c4ajv": "0.0.1",
-    "c4jwt": "0.0.1",
-    "c4utils": "0.0.2",
+    "c4accesscontrol": "0.0.2",
+    "c4ajv": "0.0.3",
+    "c4jwt": "0.0.2",
+    "c4utils": "0.0.4",
     "compression": "^1.7.2",
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
